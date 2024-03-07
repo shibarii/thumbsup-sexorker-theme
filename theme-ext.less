@@ -1,0 +1,117 @@
+// SOCIALS
+#socials {
+    margin-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1em;
+    color: @header-color;
+
+    article {
+        display: inline-block;
+        background-color: @body-color;
+        color: @body-background;
+        border-radius: 10px;
+        padding: 5px;
+        padding-left: 30px;
+        font-size: 1rem;
+        text-align: center;
+        position: relative;
+    }
+
+    img {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        aspect-ratio: 1/1;
+        width: 16px;
+    }
+}
+
+// BREADCRUMBS
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+
+    a.breadcrumb-item {
+        display: inline-block;
+    }
+
+    .breadcrumb-item:not(:first-child)::first-letter {
+        font-size: 0;
+    }
+
+    span {
+        flex-grow: 1;
+    }
+
+    a.page {
+        margin-left: 10px;
+    }
+}
+
+// ALBUMS
+#albums {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+
+    @media only screen and (max-width: 360px) {
+        grid-template-columns: 1fr;
+    }
+
+    a {
+        aspect-ratio: 3 / 2;
+        width: unset;
+        height: unset;
+        margin-right: unset;
+        margin-bottom: unset;
+        background-size: cover;
+        background-repeat: space;
+        background-position: 50% 50%;
+    }
+
+    h3::first-letter {
+        font-size: 0;
+    }
+}
+
+// MEDIA
+#media {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(30vmin, 1fr));
+
+    @media only screen and (max-width: 180px) {
+        grid-template-columns: 1fr;
+    }
+
+    li {
+        margin-right: unset;
+        margin-bottom: unset;
+        aspect-ratio: 1 / 1;
+    }
+
+    a {
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        height: 100%;
+        margin-right: unset;
+        margin-bottom: unset;
+        background-size: cover;
+        background-repeat: space;
+        background-position: 50% 50%;
+    }
+
+    img {
+        height: 100% !important;
+        width: 100% !important;
+    }
+}
+
+// AGE Check
+.ac-overlay {
+    opacity: unset !important;
+    backdrop-filter: blur(10px);
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" href="{{relative 'public/lightgallery/css/lightgallery.css'}}" />
+  <link rel="stylesheet" href="{{relative 'public/videojs/video-js.min.css'}}" />
+  <link rel="stylesheet" href="{{relative 'public/lightgallery/css/lg-exif.min.css'}}" />
+  <link rel="stylesheet" href="{{relative 'public/agecheck/agecheck.min.css'}}">
+  <link rel="stylesheet" href="{{relative 'public/core.css'}}" />
+  <link rel="stylesheet" href="{{relative 'public/theme.css'}}" />
+  <link rel="shortcut icon" type="image/ico" href="public/favicon.ico">
+
+  <!-- Primary Meta Tags -->
+  <title>Emma Addams</title>
+  <meta name="title" content="Emma Addams" />
+  <meta name="description"
+    content="Je suis une jeune fille soumise, passive et surtout masochiste, dévouée corps et âme à la soumission. Êtes-vous ici pour vous délecter de mes cris et de mes larmes pendant que mon sang ruisselle sous vos doigts? Vous vous trouvez donc au bon endroit. " />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://inherblood.pro/" />
+  <meta property="og:title" content="Emma Addams" />
+  <meta property="og:description"
+    content="Je suis une jeune fille soumise, passive et surtout masochiste, dévouée corps et âme à la soumission. Êtes-vous ici pour vous délecter de mes cris et de mes larmes pendant que mon sang ruisselle sous vos doigts? Vous vous trouvez donc au bon endroit. " />
+  <meta property="og:image" content="https://inherblood.pro/public/Watermark_WhiteOnBlack.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://inherblood.pro/" />
+  <meta property="twitter:title" content="Emma Addams" />
+  <meta property="twitter:description"
+    content="Je suis une jeune fille soumise, passive et surtout masochiste, dévouée corps et âme à la soumission. Êtes-vous ici pour vous délecter de mes cris et de mes larmes pendant que mon sang ruisselle sous vos doigts? Vous vous trouvez donc au bon endroit. " />
+  <meta property="twitter:image" content="https://inherblood.pro/public/Watermark_WhiteOnBlack.jpg" />
+
+  <!-- Meta Tags Generated with https://metatags.io -->
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  {{> content}}
+  {{> video-loader}}
+
+  <!-- jQuery -->
+  <script src="{{relative 'public/jquery.min.js'}}"></script>
+
+  <!-- AgeCheck -->
+  <script src="{{relative 'public/agecheck/jquery.agecheck-min.js'}}"></script>
+  <!-- VideoJS -->
+  <script src="{{relative 'public/videojs/video.min.js'}}"></script>
+  <!-- LightGallery -->
+  <script src="{{relative 'public/lightgallery/js/lightgallery-all.min.js'}}"></script>
+  <script src="{{relative 'public/lightgallery/js/lg-exif.min.js'}}"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#media").lightGallery({
+        thumbWidth: 80,
+        controls: true,
+        loop: false,
+        download: true,
+        counter: true,
+        videojs: true,
+        fullScreen: true,
+        zoom: true
+      });
+
+      // bypass age checks for bots
+      var botPattern = "(googlebot\/|bot|Googlebot-Mobile|Googlebot-Image|Google favicon|Mediapartners-Google|bingbot|slurp|java|wget|curl|Commons-HttpClient|Python-urllib|libwww|httpunit|nutch|phpcrawl|msnbot|jyxobot|FAST-WebCrawler|FAST Enterprise Crawler|biglotron|teoma|convera|seekbot|gigablast|exabot|ngbot|ia_archiver|GingerCrawler|webmon |httrack|webcrawler|grub.org|UsineNouvelleCrawler|antibot|netresearchserver|speedy|fluffy|bibnum.bnf|findlink|msrbot|panscient|yacybot|AISearchBot|IOI|ips-agent|tagoobot|MJ12bot|dotbot|woriobot|yanga|buzzbot|mlbot|yandexbot|purebot|Linguee Bot|Voyager|CyberPatrol|voilabot|baiduspider|citeseerxbot|spbot|twengabot|postrank|turnitinbot|scribdbot|page2rss|sitebot|linkdex|Adidxbot|blekkobot|ezooms|dotbot|Mail.RU_Bot|discobot|heritrix|findthatfile|europarchive.org|NerdByNature.Bot|sistrix crawler|ahrefsbot|Aboundex|domaincrawler|wbsearchbot|summify|ccbot|edisterbot|seznambot|ec2linkfinder|gslfbot|aihitbot|intelium_bot|facebookexternalhit|yeti|RetrevoPageAnalyzer|lb-spider|sogou|lssbot|careerbot|wotbox|wocbot|ichiro|DuckDuckBot|lssrocketcrawler|drupact|webcompanycrawler|acoonbot|openindexspider|gnam gnam spider|web-archive-net.com.bot|backlinkcrawler|coccoc|integromedb|content crawler spider|toplistbot|seokicks-robot|it2media-domain-crawler|ip-web-crawler.com|siteexplorer.info|elisabot|proximic|changedetection|blexbot|arabot|WeSEE:Search|niki-bot|CrystalSemanticsBot|rogerbot|360Spider|psbot|InterfaxScanBot|Lipperhey SEO Service|CC Metadata Scaper|g00g1e.net|GrapeshotCrawler|urlappendbot|brainobot|fr-crawler|binlar|SimpleCrawler|Livelapbot|Twitterbot|cXensebot|smtbot|bnf.fr_bot|A6-Indexer|ADmantX|Facebot|Twitterbot|OrangeBot|memorybot|AdvBot|MegaIndex|SemanticScholarBot|ltx71|nerdybot|xovibot|BUbiNG|Qwantify|archive.org_bot|Applebot|TweetmemeBot|crawler4j|findxbot|SemrushBot|yoozBot|lipperhey|y!j-asr|Domain Re-Animator Bot|AddThis)";
+      var re = new RegExp(botPattern, 'i');
+      var userAgent = navigator.userAgent; 
+      if (re.test(userAgent)) {
+          console.log('the user agent is a crawler!');
+          return;
+      }
+
+      $.ageCheck({
+
+        // min age
+        minAge: 18,
+
+        // URL to redirect when successful
+        //redirectTo: '',
+
+        // URL to redirect when failed
+        redirectOnFail: 'https://google.com',
+
+        // popup title
+        title: 'Age Verification',
+
+        // popup message
+        copy: 'This Website requires you to be [18] years or older to enter. Please enter your Date of Birth in the fields below in order to continue:',
+
+        // a callback function called when successful
+        success: null,
+
+        // success message
+        successMsg: {
+          header: 'Success!',
+          body: 'You are now being redirected back to the application...'
+        },
+
+        // fail message
+        underAgeMsg: 'Sorry, you are not old enough to view this site...',
+
+        // error message
+        errorMsg: {
+          invalidDay: 'Day is invalid or empty',
+          invalidYear: 'Year is invalid or empty'
+        },
+
+        // sessionStorage, localStorage, or cookie
+        storage: 'localStorage',
+
+        // the number of days
+        storageExpires: 7
+
+      });
+    });
+  </script>
+
+  {{> analytics}}
+
+</body>
+
+</html>

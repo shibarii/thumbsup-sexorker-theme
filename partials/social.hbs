@@ -1,0 +1,12 @@
+{{#if settings.showSocial}}
+<section id="socials">
+    {{#each settings.socials}}
+    <a href="{{url}}" target="_blank">
+        <article>
+            {{display}}
+            <img src="public/socials/{{logo}}"/>
+        </article>
+    </a>
+    {{/each}}
+</section>
+{{/if}}
