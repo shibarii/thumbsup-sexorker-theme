@@ -13,26 +13,26 @@
   <link rel="shortcut icon" type="image/ico" href="public/favicon.ico">
 
   <!-- Primary Meta Tags -->
-  <title>Emma Addams</title>
-  <meta name="title" content="Emma Addams" />
+  <title>{{gallery.title}}{{#if album.home}}{{else}} - {{removeFirstChar album.title}}{{/if}}</title>
+  <meta name="title" content="{{gallery.title}}{{#if album.home}}{{else}} - {{removeFirstChar album.title}}{{/if}}" />
   <meta name="description"
-    content="Je suis une jeune fille soumise, passive et surtout masochiste, dévouée corps et âme à la soumission. Êtes-vous ici pour vous délecter de mes cris et de mes larmes pendant que mon sang ruisselle sous vos doigts? Vous vous trouvez donc au bon endroit. " />
+    content="{{settings.seo-description}}" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://inherblood.pro/" />
-  <meta property="og:title" content="Emma Addams" />
+  <meta property="og:url" content="{{settings.seo-domain}}" />
+  <meta property="og:title" content="{{gallery.title}}{{#if album.home}}{{else}} - {{removeFirstChar album.title}}{{/if}}" />
   <meta property="og:description"
-    content="Je suis une jeune fille soumise, passive et surtout masochiste, dévouée corps et âme à la soumission. Êtes-vous ici pour vous délecter de mes cris et de mes larmes pendant que mon sang ruisselle sous vos doigts? Vous vous trouvez donc au bon endroit. " />
-  <meta property="og:image" content="https://inherblood.pro/public/Watermark_WhiteOnBlack.jpg" />
+    content="{{settings.seo-description}}" />
+  <meta property="og:image" content="{{settings.seo-domain}}{{settings.seo-image}}" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://inherblood.pro/" />
-  <meta property="twitter:title" content="Emma Addams" />
+  <meta property="og:url" content="{{settings.seo-domain}}" />
+  <meta property="twitter:title" content="{{gallery.title}}{{#if album.home}}{{else}} - {{removeFirstChar album.title}}{{/if}}" />
   <meta property="twitter:description"
-    content="Je suis une jeune fille soumise, passive et surtout masochiste, dévouée corps et âme à la soumission. Êtes-vous ici pour vous délecter de mes cris et de mes larmes pendant que mon sang ruisselle sous vos doigts? Vous vous trouvez donc au bon endroit. " />
-  <meta property="twitter:image" content="https://inherblood.pro/public/Watermark_WhiteOnBlack.jpg" />
+    content="{{settings.seo-description}}" />
+  <meta property="twitter:image" content="{{settings.seo-domain}}{{settings.seo-image}}" />
 
   <!-- Meta Tags Generated with https://metatags.io -->
 </head>
