@@ -20,7 +20,7 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{settings.seo-domain}}" />
+  <meta property="og:url" content="{{settings.seo-domain}}/{{album.url}}" />
   <meta property="og:title" content="{{gallery.title}}{{#if album.home}}{{else}} - {{removeFirstChar album.title}}{{/if}}" />
   <meta property="og:description"
     content="{{settings.seo-description}}" />
@@ -28,7 +28,7 @@
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="og:url" content="{{settings.seo-domain}}" />
+  <meta property="og:url" content="{{settings.seo-domain}}/{{album.url}}" />
   <meta property="twitter:title" content="{{gallery.title}}{{#if album.home}}{{else}} - {{removeFirstChar album.title}}{{/if}}" />
   <meta property="twitter:description"
     content="{{settings.seo-description}}" />
