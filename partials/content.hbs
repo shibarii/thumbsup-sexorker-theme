@@ -31,6 +31,18 @@
   -->
   {{{md album breadcrumbs}}}
 
+    <!--
+    All photos and videos
+  -->
+  {{#if (isMediaHidden album settings.hideMedia)}}
+      {{else}}
+  <ul id="media" class="clearfix">
+    {{#each album.files~}}
+      {{> thumbnail}}
+    {{~/each}}
+    {{/if}}
+  </ul>
+
   <!--
     Nested albums, if any
   -->
@@ -49,17 +61,7 @@
     {{~/each}}
   </div>
 
-  <!--
-    All photos and videos
-  -->
-  {{#if (isMediaHidden album settings.hideMedia)}}
-      {{else}}
-  <ul id="media" class="clearfix">
-    {{#each album.files~}}
-      {{> thumbnail}}
-    {{~/each}}
-    {{/if}}
-  </ul>
+
 
   <!--
     Pagination
